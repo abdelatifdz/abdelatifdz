@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">أخبار الفضاء</string>
+    
+    <!-- النشاط الرئيسي -->
+    <string name="tab_all">الكل</string>
+    <string name="tab_unread">غير مقروء</string>
+    <string name="tab_favorites">المفضلة</string>
+    
+    <!-- رسائل الحالة -->
+    <string name="loading">جاري التحميل...</string>
+    <string name="no_news_available">لا توجد أخبار متاحة</string>
+    <string name="no_unread_news">لا توجد أخبار غير مقروءة</string>
+    <string name="no_favorite_news">لا توجد أخبار مفضلة</string>
+    <string name="pull_to_refresh">اسحب للأسفل لتحديث الأخبار</string>
+    
+    <!-- نشاط التفاصيل -->
+    <string name="share_news">مشاركة الخبر</string>
+    <string name="open_in_browser">فتح في المتصفح</string>
+    <string name="add_to_favorites">إضافة للمفضلة</string>
+    <string name="remove_from_favorites">إزالة من المفضلة</string>
+    
+    <!-- التنبيهات -->
+    <string name="notification_title">🚀 خبر جديد من الفضاء</string>
+    <string name="notification_multiple_title">🚀 أخبار جديدة من الفضاء</string>
+    <string name="notification_channel_name">أخبار الفضاء</string>
+    <string name="notification_channel_description">تنبيهات الأخبار الجديدة من الفضاء</string>
+    
+    <!-- رسائل التحديث -->
+    <string name="refresh_success">تم تحديث الأخبار بنجاح</string>
+    <string name="refresh_error">خطأ في تحديث الأخبار</string>
+    <string name="no_internet_connection">لا يوجد اتصال بالإنترنت</string>
+    
+    <!-- أوقات نسبية -->
+    <string name="time_now">الآن</string>
+    <string name="time_minutes_ago">منذ %d دقائق</string>
+    <string name="time_hours_ago">منذ %d ساعات</string>
+    <string name="time_days_ago">منذ %d أيام</string>
+    
+    <!-- عام -->
+    <string name="space_news_source">أخبار الفضاء</string>
+    <string name="shared_from_app">مشاركة من تطبيق أخبار الفضاء</string>
+    <string name="read_more">اقرأ المزيد</string>
+</resources>
