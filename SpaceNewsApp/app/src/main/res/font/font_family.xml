@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ستحتاج إلى إضافة ملفات الخطوط العربية هنا -->
+    <!-- يمكنك استخدام خطوط Google Fonts أو خطوط مخصصة -->
+    
+    <!-- خط عادي -->
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/arabic_regular" />
+    
+    <!-- خط عريض -->
+    <font
+        android:fontStyle="normal"
+        android:fontWeight="700"
+        android:font="@font/arabic_bold" />
+        
+</font-family>
