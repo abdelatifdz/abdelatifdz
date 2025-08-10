@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: file: app: http://localhost:* ws:; script-src 'self' 'unsafe-eval' http://localhost:* app:; style-src 'self' 'unsafe-inline' http://localhost:* app:; img-src 'self' data: file: blob: app: http://localhost:*; connect-src 'self' ws: http://localhost:* app:" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدير الفواتير</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="loginView" class="view">
+        <div class="card">
+          <h2>تسجيل الدخول</h2>
+          <div class="field">
+            <label>اسم المستخدم</label>
+            <input id="loginUsername" type="text" placeholder="admin" />
+          </div>
+          <div class="field">
+            <label>كلمة المرور</label>
+            <input id="loginPassword" type="password" placeholder="admin" />
+          </div>
+          <button id="loginBtn">دخول</button>
+          <div id="loginError" class="error"></div>
+        </div>
+      </div>
+
+      <div id="dashboardView" class="view hidden">
+        <div class="topbar">
+          <div class="brand">مدير الفواتير</div>
+          <div class="spacer"></div>
+          <button id="logoutBtn" class="secondary">تسجيل الخروج</button>
+        </div>
+        <div class="tabs">
+          <button data-tab="invoices" class="tab active">الفواتير</button>
+          <button data-tab="new" class="tab">إنشاء فاتورة</button>
+          <button data-tab="settings" class="tab">الإعدادات</button>
+        </div>
+        <div class="tab-content">
+          <div id="tab-invoices" class="tab-panel">
+            <div id="invoicesList" class="list"></div>
+          </div>
+          <div id="tab-new" class="tab-panel hidden">
+            <div class="card">
+              <h3>إنشاء فاتورة</h3>
+              <div class="row">
+                <div class="field">
+                  <label>اسم العميل</label>
+                  <input id="custName" type="text" />
+                </div>
+                <div class="field">
+                  <label>عنوان العميل</label>
+                  <input id="custAddress" type="text" />
+                </div>
+                <div class="field">
+                  <label>تاريخ الفاتورة</label>
+                  <input id="invDate" type="date" />
+                </div>
+              </div>
+              <table class="items">
+                <thead>
+                  <tr>
+                    <th>الوصف</th>
+                    <th>الكمية</th>
+                    <th>سعر الوحدة</th>
+                    <th>الإجمالي</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="itemsBody"></tbody>
+              </table>
+              <button id="addItemBtn" class="secondary">إضافة بند</button>
+              <div class="row totals">
+                <div class="field">
+                  <label>الضريبة</label>
+                  <input id="taxInput" type="number" step="0.01" value="0" />
+                </div>
+                <div class="summary">
+                  <div>المجموع: <span id="subtotalSpan">0.00</span></div>
+                  <div>الضريبة: <span id="taxSpan">0.00</span></div>
+                  <div class="grand">الإجمالي: <span id="totalSpan">0.00</span></div>
+                </div>
+              </div>
+              <div class="actions">
+                <button id="createInvoiceBtn">حفظ الفاتورة</button>
+              </div>
+            </div>
+          </div>
+          <div id="tab-settings" class="tab-panel hidden">
+            <div class="card">
+              <h3>الإعدادات</h3>
+              <div class="row">
+                <div class="field">
+                  <label>اسم الشركة</label>
+                  <input id="setCompanyName" type="text" />
+                </div>
+                <div class="field">
+                  <label>عنوان الشركة</label>
+                  <input id="setCompanyAddress" type="text" />
+                </div>
+                <div class="field">
+                  <label>هاتف الشركة</label>
+                  <input id="setCompanyPhone" type="text" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="field">
+                  <label>بادئة الفواتير</label>
+                  <input id="setInvoicePrefix" type="text" />
+                </div>
+                <div class="field">
+                  <label>رقم الفاتورة التالي</label>
+                  <input id="setNextNumber" type="number" />
+                </div>
+              </div>
+              <div class="row">
+                <button id="uploadLogoBtn" class="secondary">رفع الشعار</button>
+                <img id="logoPreview" alt="شعار" style="height:50px;margin-inline-start:12px;" />
+              </div>
+              <div class="actions">
+                <button id="saveSettingsBtn">حفظ</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
