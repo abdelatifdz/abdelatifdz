@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>واجهة ليلية - نظام جداول الكميات</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="theme-dark">
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="logo">🧮</div>
+          <div class="brand-name">BOQ</div>
+        </div>
+        <nav class="nav">
+          <a class="nav-item active" href="#">لوحة التحكم</a>
+          <a class="nav-item" href="#">المشاريع</a>
+          <a class="nav-item" href="#">الغرف</a>
+          <a class="nav-item" href="#">العناصر</a>
+          <a class="nav-item" href="#">الموردون</a>
+          <a class="nav-item" href="#">المشتريات</a>
+          <a class="nav-item" href="#">المخزون</a>
+          <a class="nav-item" href="#">التقارير</a>
+          <div class="nav-sep"></div>
+          <a class="nav-item" href="#">الإعدادات</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="search">
+            <input type="text" placeholder="ابحث عن مشروع أو عنصر..." />
+          </div>
+          <div class="actions">
+            <button class="btn btn-ghost" id="clientModeToggle">وضع العميل</button>
+            <button class="btn btn-primary">مشروع جديد</button>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="hero-text">
+            <h1>واجهة ليلية عصرية</h1>
+            <p>تجربة مريحة للعين لإدارة جداول الكميات، مع تباين واضح وألوان مكمّلة.</p>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-title">المشاريع النشطة</div>
+              <div class="stat-value">12</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-title">طلبات الشراء</div>
+              <div class="stat-value">7</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-title">تنبيهات المخزون</div>
+              <div class="stat-value warning">3</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid">
+          <article class="card">
+            <div class="card-head">
+              <h3>آخر المشاريع</h3>
+              <button class="btn btn-ghost">عرض الكل</button>
+            </div>
+            <div class="list">
+              <div class="list-item">
+                <div>
+                  <div class="title">فيلا سكنية - منطقة الواجهة</div>
+                  <div class="sub">سكني • 650 م² • الميزانية: 1.2M</div>
+                </div>
+                <div class="badges">
+                  <span class="badge">تصميم</span>
+                </div>
+              </div>
+              <div class="list-item">
+                <div>
+                  <div class="title">مكتب هندسي</div>
+                  <div class="sub">مكتبي • 420 م² • الميزانية: 650K</div>
+                </div>
+                <div class="badges">
+                  <span class="badge">تنفيذ</span>
+                </div>
+              </div>
+              <div class="list-item">
+                <div>
+                  <div class="title">معرض تجاري</div>
+                  <div class="sub">تجاري • 880 م² • الميزانية: 2.4M</div>
+                </div>
+                <div class="badges">
+                  <span class="badge">توريد</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <h3>عناصر مضافة حديثًا</h3>
+              <div class="filters">
+                <button class="chip">الأثاث</button>
+                <button class="chip">الإضاءة</button>
+                <button class="chip">الأرضيات</button>
+              </div>
+            </div>
+            <table class="table client-sensitive">
+              <thead>
+                <tr>
+                  <th>العنصر</th>
+                  <th>الفئة</th>
+                  <th>الكمية</th>
+                  <th class="price-col">السعر</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>أريكة ثلاثية</td>
+                  <td>الأثاث</td>
+                  <td>2</td>
+                  <td class="price-col">3,500</td>
+                </tr>
+                <tr>
+                  <td>ثريا كريستال</td>
+                  <td>الإضاءة</td>
+                  <td>1</td>
+                  <td class="price-col">5,200</td>
+                </tr>
+                <tr>
+                  <td>رخام كارارا</td>
+                  <td>الأرضيات</td>
+                  <td>120 م²</td>
+                  <td class="price-col">220/م²</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="card">
+            <div class="card-head">
+              <h3>المهام</h3>
+              <button class="btn btn-ghost">مهمة جديدة</button>
+            </div>
+            <ul class="tasks">
+              <li>
+                <input type="checkbox" />
+                مراجعة عروض أسعار الإضاءة
+              </li>
+              <li>
+                <input type="checkbox" checked />
+                اعتماد عينات الأرضيات
+              </li>
+              <li>
+                <input type="checkbox" />
+                تحديث جدول الكميات لغرفة المعيشة
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <footer class="footer">
+          <span>© 2025 نظام BOQ للتصميم الداخلي</span>
+          <div class="theme-toggle">
+            <label class="switch">
+              <input type="checkbox" id="themeToggle" checked />
+              <span class="slider"></span>
+            </label>
+            <span>الوضع الليلي</span>
+          </div>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      const clientModeToggle = document.getElementById('clientModeToggle');
+      const body = document.body;
+
+      // Persist theme
+      const savedTheme = localStorage.getItem('theme') || 'dark';
+      if (savedTheme === 'dark') {
+        body.classList.add('theme-dark');
+        themeToggle.checked = true;
+      } else {
+        body.classList.remove('theme-dark');
+        themeToggle.checked = false;
+      }
+
+      themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+          body.classList.add('theme-dark');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          body.classList.remove('theme-dark');
+          localStorage.setItem('theme', 'light');
+        }
+      });
+
+      // Client mode hides price columns/values
+      const savedClientMode = localStorage.getItem('clientMode') === 'true';
+      document.body.classList.toggle('client-mode', savedClientMode);
+      clientModeToggle.addEventListener('click', () => {
+        const isOn = document.body.classList.toggle('client-mode');
+        localStorage.setItem('clientMode', String(isOn));
+        clientModeToggle.classList.toggle('btn-primary', isOn);
+      });
+    </script>
+  </body>
+  </html>
+
